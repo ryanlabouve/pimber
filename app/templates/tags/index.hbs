@@ -1,8 +1,5 @@
-Test
-<ul>
-  {{isLoaded}}
-{{log this}}
+<ul class="list-group">
 {{#each}}
-  --{{name}}
+  <li class="list-group-item"><span class="badge">{{count}}</span>{{name}}</li>
 {{/each}}
 </ul>

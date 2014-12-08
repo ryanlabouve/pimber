@@ -1,6 +1,17 @@
-<ul>
-{{#each}}
-  <li>Link: {{link}}</li>
-{{/each}}
-</ul>
+<div class="panel panel-default">
+  <div class="panel-heading">Showing All Links</div>
+  <div class="panel-body">
+    <div class="list-group">
+    {{#each}}
+      <a class="list-group-item" {{unbound link}}>
+        <div class="small muted pull-right">{{date}}</div>
+        <h3 class="list-group-item-heading">{{description}}</h3>
+        <p class="list-group-item-text">
+          {{link}}
+        </p>
+      </a>
+    {{/each}}
+    </div>
+  </div>
+</div>
 {{outlet}}
