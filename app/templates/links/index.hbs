@@ -1,6 +1,14 @@
 <div class="panel panel-default">
-  <div class="panel-heading">Showing All Links</div>
-  <div class="panel-body">
+  <div class="panel-heading">
+    <div class="pull-right" {{action "showRandomLink" on="click"}}>
+      <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+    </div>
+    <div>Showing {{total}} Links</div>
+  </div>
+  <div {{bind-attr class=":panel-body showingRandomLink:showing:hidden"}}>
+    Showing Random Link
+    <p class="lead">{{randomLinkDescription}}</p>
+    <p class="muted">{{randomLeadLink}}</p>
   </div>
   <div class="list-group">
   {{#each}}
