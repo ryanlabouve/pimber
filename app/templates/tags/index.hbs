@@ -2,13 +2,11 @@
   <li class="list-group-item">
     <div class="input-group">
       {{input value=search type="text" class="form-control" placeholder="search tags"}}
-      <br/>
-      {{search}}
       <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
     </div>
   </li>
   {{log this}}
-{{#each}}
-  <li {{bind-attr class=":list-group-item"}}><span class="badge">{{count}}</span>{{name}}oo</li>
+{{#each filteredTags}}
+  <li {{bind-attr class=":list-group-item"}}><span class="badge">{{count}}</span>{{name}}</li>
 {{/each}}
 </ul>
