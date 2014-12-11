@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
   search: '',
+  selectedTags: [],
   filteredTags: function() {
     var search = this.get('search');
     if(search.length) {
