@@ -5,11 +5,12 @@
     </div>
     <div>Showing {{total}} Links</div>
   </div>
-  <div {{bind-attr class=":panel-body showingRandomLink:showing:hidden"}}>
-    Showing Random Link
-    <p class="lead">{{randomLinkDescription}}</p>
-    <p class="muted">{{randomLeadLink}}</p>
+  {{#if randomLink}}
+  <div class="panel-body">
+    <p class="lead">{{randomLink.description}}</p>
+    <p class="muted">{{randomLink.link}}</p>
   </div>
+  {{/if}}
   <div class="list-group">
   {{#each}}
     <a class="list-group-item" {{bind-attr href=link}}>
